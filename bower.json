@@ -1,0 +1,34 @@
+{
+  "name": "information-of-big-data",
+  "version": "0.0.1",
+  "authors": [
+    "yyong <coolfish2004@hotmail.com>"
+  ],
+  "description": "osd",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "osd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "artTemplate": "https://github.com/aui/artTemplate.git#~3.0.1",
+    "bootstrap": "~3.3.5",
+    "domReady": "~2.0.1",
+    "echarts": "~2.2.7",
+    "jquery": "~2.1.4",
+    "moment": "~2.10.6",
+    "requirejs": "~2.1.20",
+    "socket.io-client": "~1.3.6",
+    "zrender": "~2.1.1"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "cookie-parser/cookie-parser.d.ts": {
+      "commit": "a278148f0ec80f2aa9a2ec22f5089308f74dda47"
+    },
+    "body-parser/body-parser.d.ts": {
+      "commit": "a278148f0ec80f2aa9a2ec22f5089308f74dda47"
+    },
+    "request/request.d.ts": {
+      "commit": "a278148f0ec80f2aa9a2ec22f5089308f74dda47"
+    },
+    "form-data/form-data.d.ts": {
+      "commit": "a278148f0ec80f2aa9a2ec22f5089308f74dda47"
+    },
+    "serve-static/serve-static.d.ts": {
+      "commit": "a278148f0ec80f2aa9a2ec22f5089308f74dda47"
+    },
+    "mime/mime.d.ts": {
+      "commit": "a278148f0ec80f2aa9a2ec22f5089308f74dda47"
+    },
+    "node/node.d.ts": {
+      "commit": "a278148f0ec80f2aa9a2ec22f5089308f74dda47"
+    },
+    "express/express.d.ts": {
+      "commit": "a278148f0ec80f2aa9a2ec22f5089308f74dda47"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "a278148f0ec80f2aa9a2ec22f5089308f74dda47"
+    },
+    "socket.io/socket.io.d.ts": {
+      "commit": "a278148f0ec80f2aa9a2ec22f5089308f74dda47"
+    }
+  }
+}
