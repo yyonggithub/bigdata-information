@@ -17,10 +17,21 @@ module.exports = function (grunt) {
         file: 'bin/www'
       }
     },
+    // Browersync:{
+    //   dev:{
+    //     bsFiles:{
+    //       src:[
+    //         'public/**/*.css',
+    //         'public/**/*.js',
+    //         'views/**/*.html'
+    //       ]
+    //     }
+    //   }
+    // },
     watch: {
       options: {
         nospawn: true,
-        livereload: reloadPort
+        livereload: true
       },
       server: {
         files: [
@@ -34,7 +45,7 @@ module.exports = function (grunt) {
       js: {
         files: ['public/js/*.js'],
         options: {
-          livereload: reloadPort
+          livereload: true
         }
       },
       css: {
@@ -42,13 +53,13 @@ module.exports = function (grunt) {
           'public/css/*.css'
         ],
         options: {
-          livereload: reloadPort
+          livereload: true
         }
       },
       views: {
         files: ['views/**/*.html'],
         options: {
-          livereload: reloadPort
+          livereload: true
         }
       }
     }
@@ -75,6 +86,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'develop',
+    // 'Browersync',
     'watch'
   ]);
 };
