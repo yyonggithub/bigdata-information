@@ -1,9 +1,9 @@
 require.config({
 	paths: {
-		template: 'artTemplate/dist/template-debug',
-		socket: 'socket.io-client/socket.io',
-		echarts: 'echarts/build/dist',
-		domReady: 'domReady/domReady'
+		template: 'components/artTemplate/dist/template-debug',
+		socket: 'components/socket.io-client/socket.io',
+		echarts: 'components/echarts/build/dist',
+		domReady: 'components/domReady/domReady'
 	},
 	shim: {
 	}
