@@ -111,11 +111,11 @@ require([
 				center: ['50%', '95%'],    // 默认全局居中
 				radius: 105,
 				axisLine: {            // 坐标轴线
-					show:true,
+					show: true,
 					lineStyle: {       // 属性lineStyle控制线条样式
-						color:[
-							[0.3,'#37a8b8'],
-							[0.7,'#639e92'],
+						color: [
+							[0.3, '#37a8b8'],
+							[0.7, '#639e92'],
 							// [0.1,'#639e92']
 						],
 						width: 60
@@ -155,6 +155,71 @@ require([
 			}
 		]
 	};
-
 	mobileOpenNumber.setOption(monOption);
+	
+	//客服服务平均通话时长
+	var serviceCall = echarts.init(document.getElementById('js-service-call'));
+	var scOption = {
+		tooltip: {
+			trigger: 'axis'
+		},
+
+		calculable: true,
+		xAxis: [
+			{
+				type: 'category',
+				data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+			}
+		],
+		yAxis: [
+			{
+				type: 'value'
+			}
+		],
+		series: [
+			{
+				name: '降水量',
+				type: 'bar',
+				data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+				// markLine: {
+				// 	data: [
+				// 		{ type: 'average', name: '平均值' }
+				// 	]
+				// }
+			}
+		]
+	};
+	serviceCall.setOption(scOption);
+	
+	//客服服务投诉量
+	var serviceComplaint = echarts.init(document.getElementById('js-service-complaint'));
+	var scpOption = {
+		tooltip: {
+			trigger: 'axis'
+		},
+		legend: {
+			data: ['2012年']
+		},
+		calculable: true,
+		xAxis: [
+			{
+				type: 'value',
+				boundaryGap: [0, 0.01]
+			}
+		],
+		yAxis: [
+			{
+				type: 'category',
+				data: ['差评', '较好', '满意']
+        }
+		],
+		series: [
+			{
+				name: '2012年',
+				type: 'bar',
+				data: [19325, 134141, 681807]
+			}
+		]
+	}
+	serviceComplaint.setOption(scpOption);
 })
