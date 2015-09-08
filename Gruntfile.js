@@ -17,7 +17,7 @@ module.exports = function (grunt) {
         file: 'bin/www'
       }
     },
-      
+
     less: {
       development: {
         files: {
@@ -26,6 +26,19 @@ module.exports = function (grunt) {
       }
     },
 
+    bower: {
+      install: {
+        options: {
+          targetDir: 'public/lib',
+          layout: 'byComponent',
+          install: true,
+          verbose: false,
+          cleanTargetDir: false,
+          bowerOptions: {}
+        }
+      }
+    },
+    
     watch: {
       options: {
         nospawn: true,
@@ -50,7 +63,7 @@ module.exports = function (grunt) {
         files: [
           'public/css/*.less'
         ],
-        tasks:['less'],
+        tasks: ['less'],
         options: {
           livereload: true
         }
