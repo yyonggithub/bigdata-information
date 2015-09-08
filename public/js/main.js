@@ -1,8 +1,8 @@
 require.config({
 	paths: {
-		template: 'components/artTemplate/dist/template-debug',
-		jquery: 'components/jquery/dist/jquery',
-		socket: 'components/socket.io-client/socket.io'
+		template: 'lib/artTemplate/template-debug',
+		jquery: 'lib/jquery/jquery',
+		socket: 'lib/socket.io-client/socket.io'
 	},
 	shim: {
 	}
