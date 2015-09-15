@@ -1,0 +1,48 @@
+@body-color:url("/img/page1/page1-pg.png");
+@bg-color:#0ca19b;
+@text-color:#1da9a6;
+@text-num-color:#E9D13A;
+@border-color:#0ca19b;
+*{
+	font-family: "Microsoft YaHei";	
+}
+.number-text{
+	color: @text-num-color;
+}
+hr {
+	border-color: @bg-color;
+}
+body{
+	color: @text-color;
+	background-image: @body-color;
+	& .container-fluid{
+		height:540px;
+		& .component-6{
+			padding-top:35px;
+			& .col-lg-10{
+				border-bottom: 2px solid @border-color;
+				& .col-lg-6:last-of-type{
+					margin-top: 33px;
+					& span{
+						width:30px;
+						height:10px;
+						display: inline-block;
+						background: chocolate;
+						margin-right: 6px;
+						border-radius:5px;
+					}
+				}
+			}
+		}
+		& .row{
+			& .col-lg-12{
+				height:200px;
+				text-align: center;
+			}
+		}
+	}
+}
+
+#js-all-year-deselect{
+	height: 150px;
+}

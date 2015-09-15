@@ -41,8 +41,6 @@ require([
 	var lnOption = {
 		title: {
 			text: '75%',
-			// subtext: 'From ExcelHome',
-			// sublink: 'http://e.weibo.com/1341556070/AhQXtjbqh',
 			x: 'center',
 			y: 'center',
 			itemGap: 20,
@@ -111,7 +109,7 @@ require([
 				center: ['50%', '95%'],    // 默认全局居中
 				radius: 105,
 				axisLine: {            // 坐标轴线
-					show: true,
+					// show: false,
 					lineStyle: {       // 属性lineStyle控制线条样式
 						color: [
 							[0.3, '#37a8b8'],
@@ -158,34 +156,88 @@ require([
 	mobileOpenNumber.setOption(monOption);
 	
 	//客服服务平均通话时长
-	var serviceCall = echarts.init(document.getElementById('js-service-call'));
+	var serviceCall = echarts.init(document.getElementById('js-fixed-network-service'));
 	var scOption = {
 		tooltip: {
-			trigger: 'axis'
+			// trigger: 'item',
+			// axisPointer:{
+			// 	type:'none'
+			// 	}
 		},
-
-		calculable: true,
+		// calculable: true,
+		grid: {
+			// x: '15%',
+			y: '5%',
+			// x2: '15%',
+			y2: '45%',
+			borderWidth: "0"
+		},
+		itemStyle: {
+			color: {
+				seriesIndex: "#0ca19b"
+			}
+		},
 		xAxis: [
 			{
-				type: 'category',
-				data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+				type: 'value',
+				boundaryGap: [0],
+				axisLabel: {
+					textStyle: {
+						color: "#7BC2A4"
+					}
+				},
+				splitLine: {
+					show: false
+				}
+				// splitArea:{
+				// 	show:true
+				// }
 			}
 		],
 		yAxis: [
 			{
-				type: 'value'
+				type: 'category',
+				data: [
+					{
+						value: '本地',
+						textStyle: {
+							color: '#7BC2A4'
+						},
+					},
+					{
+						value: '国内',
+						textStyle: {
+							color: '#EB6F99'
+						},
+					},
+					{
+						value: '港澳台',
+						textStyle: {
+							color: '#E9D13A'
+						},
+					},
+					{
+						value: '国际',
+						textStyle: {
+							color: '#38ACC6'
+						},
+					},
+				],
+				axisLabel: {
+					textStyle: {
+						color: "#7BC2A4"
+					}
+				},
+				splitLine: {
+					show: false
+				}
 			}
 		],
 		series: [
 			{
-				name: '降水量',
+				name: '固网业务量',
 				type: 'bar',
-				data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
-				// markLine: {
-				// 	data: [
-				// 		{ type: 'average', name: '平均值' }
-				// 	]
-				// }
+				data: [24584, 57821, 39578, 40125]
 			}
 		]
 	};
@@ -195,29 +247,52 @@ require([
 	var serviceComplaint = echarts.init(document.getElementById('js-service-complaint'));
 	var scpOption = {
 		tooltip: {
-			trigger: 'axis'
+			// trigger: 'axis'
 		},
-		legend: {
-			data: ['2012年']
+		// calculable: true,
+		grid: {
+			// x: '15%',
+			y: '5%',
+			// x2: '15%',
+			y2: '45%',
+			borderWidth: "0"
 		},
-		calculable: true,
 		xAxis: [
 			{
 				type: 'value',
-				boundaryGap: [0, 0.01]
+				boundaryGap: [0],
+				axisLabel: {
+					textStyle: {
+						color: "#7BC2A4"
+					}
+				},
+				axisTick: {
+					show: false
+				},
+				splitLine: {
+					show: false
+				}
 			}
 		],
 		yAxis: [
 			{
 				type: 'category',
+				axisLabel: {
+					textStyle: {
+						color: "#7BC2A4"
+					}
+				},
+				splitLine: {
+					show: false
+				},
 				data: ['差评', '较好', '满意']
-        }
+			}
 		],
 		series: [
 			{
 				name: '2012年',
 				type: 'bar',
-				data: [19325, 134141, 681807]
+				data: [30, 50, 50]
 			}
 		]
 	}

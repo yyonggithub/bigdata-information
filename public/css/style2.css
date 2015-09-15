@@ -1,0 +1,40 @@
+* {
+  font-family: "Microsoft YaHei";
+}
+.number-text {
+  color: #e9d13a;
+}
+hr {
+  border-color: #0ca19b;
+}
+body {
+  color: #1da9a6;
+  background-image: url("/img/page1/page1-pg.png");
+}
+body .container-fluid {
+  height: 540px;
+}
+body .container-fluid .component-6 {
+  padding-top: 35px;
+}
+body .container-fluid .component-6 .col-lg-10 {
+  border-bottom: 2px solid #0ca19b;
+}
+body .container-fluid .component-6 .col-lg-10 .col-lg-6:last-of-type {
+  margin-top: 33px;
+}
+body .container-fluid .component-6 .col-lg-10 .col-lg-6:last-of-type span {
+  width: 30px;
+  height: 10px;
+  display: inline-block;
+  background: chocolate;
+  margin-right: 6px;
+  border-radius: 5px;
+}
+body .container-fluid .row .col-lg-12 {
+  height: 200px;
+  text-align: center;
+}
+#js-all-year-deselect {
+  height: 150px;
+}

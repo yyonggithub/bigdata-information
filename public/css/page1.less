@@ -1,133 +1,159 @@
+@body-color:url("/img/page1/page1-pg.png");
 @bg-color:#0ca19b;
 @text-color:#1da9a6;
+@text-num-color:#E9D13A;
 @border-color:#0ca19b;
+*{
+	font-family: "Microsoft YaHei";	
+}
+.number-text{
+	color: @text-num-color;
+}
+hr {
+	border-color: @bg-color;
+}
 
 body {
 	color: @text-color;
-	background-image: url("/img/page1/pg1.png");
-	height:1080px;
-	width:1920px;
-}
-hr {
-	border: 0px;
-	background-color: @bg-color;
-	height:2px;
-}
-.info-title h2{
-	letter-spacing:6px;
-}
-
-/*组件-尺寸6*/
-.component-6{
-	height:265px;
-}
-
-.container{
-	width:1920px;
-	// 上层
-	&.up{
-		margin-top:115px;
-	}
-	// 下层
-	&.down{
-		margin-top: 15px;
-	}
-}
-
-// 大标题
-.info-title{
-	padding-left: 40px;
-	padding-right: 40px;
-	align-content: center;
-	letter-spacing: 4px;
-	word-spacing: 6px;
-	.title{
-		padding-left: 150px;
-		padding-right:60px;
-		h1{
-			letter-spacing: 16px;
+	background-image: @body-color;
+	& .container-fluid{
+		height:540px;
+		// 上层
+		&.up{
+			& hr{
+				margin-right: 40px;
+				margin-left: 40px;
+			}
+			// 大标题
+			& .title{
+				padding:50px;
+				& h3:first-of-type{
+					margin-left: -300px;
+				}
+				& h3:last-of-type{
+					margin-left:244px;
+				}
+			}
+			// 二维码
+			& .QR-Code{
+				overflow: hidden;
+				padding:10px;
+				margin: 20px 215px;	
+				border: 1px solid @border-color;
+			}
+			// 订单业务用户数和光网端口覆盖率
+			& .up-right{
+				padding-top: 80px;
+				& .orders{
+					& .col-lg-6{
+						padding-top:35px;
+						& h1{
+							margin-top: 15px;
+						}
+						& h3{
+							border-top: 4px solid @border-color;
+							padding-top: 20px;
+							margin-left: 25px;
+							margin-right: 25px;
+							// border-top-left-radius: 
+						}
+					}
+				}
+			}
 		}
-		h3{
-			margin-left: 20px;
+		
+		// 下层
+		&.down{
+			& .component-6{
+				margin-top:20px;
+				height:250px;
+				text-align: center;
+				& hr{
+					margin-right: 40px;
+					margin-left: 40px;
+				}
+				// 移动用户到达数
+				&.mobile-user{
+					& .col-lg-12{
+						padding:3px;
+					}
+				}
+				// 移动语音业务量
+				&.mobile-voice{
+					& .col-lg-12{
+						& h2{
+							border-bottom: 2px dotted @border-color;
+						}
+					}
+				}
+				// 移动数据业务量
+				&.mobile-data{
+					& .col-lg-12{
+						& h2{
+							border-bottom: 2px dotted @border-color;
+						}
+					}
+				}
+			}
+			// 客服业务量
+			& .service-business-number{
+				& .col-lg-4{
+					& .col-lg-6:first-of-type{
+						text-align: right;
+						border-right:2px solid @border-color;
+					}
+				}
+				// 移动客服业务量
+				& .col-lg-4:nth-of-type(1){
+					& .col-lg-6{
+						padding-top:8px;
+						padding-bottom:8px;
+					}
+					& .col-lg-6:nth-of-type(2){
+						& h3{
+							margin-top:28px;
+						}
+					}
+				}
+				// 固话客服业务量
+				& .col-lg-4:nth-of-type(2){
+					& .col-lg-6{
+						padding-top: 17px;
+						padding-bottom: 16px;
+					}
+				}
+				// 宽带客服业务量
+				& .col-lg-4:nth-of-type(3){
+					& .col-lg-6{
+						padding-top: 15px;
+						padding-bottom: 15px;
+					}
+				}
+			}
 		}
 	}
 }
 
-// 二维码
-.QR-Code .col-lg-4:first-child{
-	margin-top: 58px;
-	border: 1px solid @border-color;
-	padding: 5px;
-	padding-top:10px;
-	padding-bottom:10px;
-}
-
-// 订单业务用户数
-.orders{
-	padding-left: 48px;
-	padding-right: 48px;
-}
-.dingdan-bg h1{
-	/*position: absolute;*/
-	margin-top:-110px;
-	margin-left: 40px;
-	/*left:131px;*/
-}
-
-// 光网端口覆盖率-图表
-.light-network{
-	padding-left: 48px;
-	padding-right: 48px;
-}
-
-// 光网端口覆盖率-图表
+// 光网端口覆盖率
 #js-light-network{
-	height: 200px;
+	height:250px;
+	text-align: center;
 }
-
-// 移动开机用户数-图表
+// 移动开机用户数
 #js-mobile-open-number{
-	height: 120px;
-}
-// 移动业务量
-.mobile-business-number ul h2{
-	padding-bottom: 10px;
-	border-bottom: 2px dotted @border-color;
+	height:115px;
+	text-align: center;
 }
 // 固网业务量
-.network-business-number ul h2{
-	padding-bottom: 10px;
-	border-bottom: 2px dotted @border-color;
-}
-
-// 客服服务平均通话时长-图表
-#js-service-call{
-	margin-top: -170px;
-	left: 40px;
-	/*position: absolute;*/
-	height: 220px;
-	width:470px;
-}
-// 客服服务服务投诉量-图表
-#js-service-complaint{
-	margin-top: -20px;
+#js-fixed-network-service{
 	height:220px;
+	text-align: center;
+	// margin-top: -50px;
 }
-
-.service-business-number{
-	.col-lg-8{
-		/*margin-top: 35px;*/
-		border-top: 1px solid @border-color;
-		border-left: 1px solid @border-color;
-		border-bottom: 1px solid @border-color;
-		padding-top: 17px;
-		padding-bottom:17px;
-		left: 17px;
-	}
-	.col-lg-4{
-		border: 1px solid @border-color;
-	}
-} 
-#aaa{
-	transform: rotate(180deg);
+// 客服服务投诉量
+#js-service-complaint{
+	height: 220px;
+	text-align: center;
+	// margin-top: -50px;
+	
 }

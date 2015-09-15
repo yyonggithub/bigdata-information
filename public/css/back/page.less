@@ -1,0 +1,133 @@
+@bg-color:#0ca19b;
+@text-color:#1da9a6;
+@border-color:#0ca19b;
+
+body {
+	color: @text-color;
+	background-image: url("/img/page1/pg1.png");
+	// height:1080px;
+	// width:1920px;
+}
+hr {
+	border: 0px;
+	background-color: @bg-color;
+	height:2px;
+}
+.info-title h2{
+	letter-spacing:6px;
+}
+
+/*组件-尺寸6*/
+.component-6{
+	height:265px;
+}
+
+.container{
+	// width:1920px;
+	// 上层
+	&.up{
+		margin-top:115px;
+	}
+	// 下层
+	&.down{
+		margin-top: 15px;
+	}
+}
+
+// 大标题
+.info-title{
+	padding-left: 40px;
+	padding-right: 40px;
+	align-content: center;
+	letter-spacing: 4px;
+	word-spacing: 6px;
+	.title{
+		padding-left: 150px;
+		padding-right:60px;
+		h1{
+			letter-spacing: 16px;
+		}
+		h3{
+			margin-left: 20px;
+		}
+	}
+}
+
+// 二维码
+.QR-Code .col-lg-4:first-child{
+	margin-top: 58px;
+	border: 1px solid @border-color;
+	padding: 5px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+// 订单业务用户数
+.orders{
+	padding-left: 48px;
+	padding-right: 48px;
+}
+.dingdan-bg h1{
+	/*position: absolute;*/
+	margin-top:-110px;
+	margin-left: 40px;
+	/*left:131px;*/
+}
+
+// 光网端口覆盖率-图表
+.light-network{
+	padding-left: 48px;
+	padding-right: 48px;
+}
+
+// 光网端口覆盖率-图表
+#js-light-network{
+	height: 200px;
+}
+
+// 移动开机用户数-图表
+#js-mobile-open-number{
+	height: 120px;
+}
+// 移动业务量
+.mobile-business-number ul h2{
+	padding-bottom: 10px;
+	border-bottom: 2px dotted @border-color;
+}
+// 固网业务量
+.network-business-number ul h2{
+	padding-bottom: 10px;
+	border-bottom: 2px dotted @border-color;
+}
+
+// 客服服务平均通话时长-图表
+#js-service-call{
+	margin-top: -170px;
+	left: 40px;
+	/*position: absolute;*/
+	height: 220px;
+	width:470px;
+}
+// 客服服务服务投诉量-图表
+#js-service-complaint{
+	margin-top: -20px;
+	height:220px;
+}
+
+.service-business-number{
+	.col-lg-8{
+		/*margin-top: 35px;*/
+		border-top: 1px solid @border-color;
+		border-left: 1px solid @border-color;
+		border-bottom: 1px solid @border-color;
+		padding-top: 17px;
+		padding-bottom:17px;
+		left: 17px;
+	}
+	.col-lg-4{
+		border: 1px solid @border-color;
+	}
+} 
+#aaa{
+	transform: rotate(180deg);
+}

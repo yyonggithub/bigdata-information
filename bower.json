@@ -9,6 +9,7 @@
   "dependencies": {
     "artTemplate": "https://github.com/aui/artTemplate.git#~3.0.1",
     "bootstrap": "~3.3.5",
+    "director": "~1.2.8",
     "domReady": "~2.0.1",
     "echarts": "~2.2.7",
     "jquery": "~2.1.4",
@@ -49,7 +50,10 @@
       "/chart": "build/dist/chart/*.js"
     },
     "zrender": {
-      "":"build/zrender.js"
+      "": "build/zrender.js"
+    },
+    "director":{
+      "": "build/director.min.js"
     }
   }
 }

@@ -21,8 +21,25 @@ module.exports = function (grunt) {
     less: {
       development: {
         files: {
-          "public/css/page1.css": "public/css/page1.less"
+          "public/css/page1.css": "public/css/page1.less",
+          "public/css/page2.css": "public/css/page2.less"
         },
+      }
+    },
+
+    autoprefixer: {
+      dist: {
+        files: {
+          "public/css/style1.css": "public/css/page1.css",
+          "public/css/style2.css": "public/css/page2.css"
+        },
+        options:{
+          livereload: true
+        }
+        // watch: {
+        //   files: ['public/css/page1.css'],
+        //   tasks: ['autoprefixer']
+        // }
       }
     },
 
@@ -38,7 +55,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+
     watch: {
       options: {
         nospawn: true,
@@ -59,15 +76,18 @@ module.exports = function (grunt) {
           livereload: true
         }
       },
-      css: {
+      less: {
         files: [
           'public/css/*.less'
         ],
-        tasks: ['less'],
-        options: {
-          livereload: true
-        }
+        tasks: ['less','autoprefixer'],
       },
+      // css:{
+      //   files:[
+      //     'public/css/*.css'
+      //   ],
+      //   tasks:['autoprefixer']
+      // },
       views: {
         files: ['views/**/*.html'],
         options: {
@@ -96,8 +116,8 @@ module.exports = function (grunt) {
       });
     }, 500);
   });
-
   grunt.registerTask('default', [
+    'bower',
     'less',
     'develop',
     'watch'

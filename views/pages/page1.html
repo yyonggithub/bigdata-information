@@ -7,217 +7,204 @@
 	<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="lib/bootstrap/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="css/page1.css">
+
 </head>
 
 <body>
-	<div class="container up">
+	<div class="container-fluid up">
 		<div class="row">
-			<div class="col-lg-6 col-sm-6">
+			<div class="col-lg-6 col-sm-6 title">
 				<!--大标题-->
 				<div class="row info-title">
 					<div class="col-lg-12">
-						<div class="title">
-							<h3>SHANGHAI</h3>
-							<h1 class="text-right">上海市信息大数据实时情况</h1>
-							<h3 class="text-right">REAL-TIME BIG DATA INFORMATION</h3>
-							<h3 class="text-right">VISUALIZATION</h3>
+						<div class=>
+							<h3 class="text-center">SHANGHAI</h3>
+							<h1 class="text-center">上海市信息大数据实时情况</h1>
+							<h3 class="text-center">REAL-TIME BIG DATA INFORMATION</h3>
+							<h3 class="text-center">VISUALIZATION</h3>
 						</div>
 					</div>
 				</div>
 				<!--//大标题-->
 				<!--二维码-->
-				<div class="row QR-Code">
-					<div class="col-lg-4 col-lg-offset-4">
-						<div class="col-lg-6 col-sm-6">
-							<h4>请扫描二维码</h4>
-							<h2>登陆</h2>
-						</div>
-						<div class="col-lg-6 col-sm-6">
-							<img src="/img/page1/QR.png" alt="二维码扫描" style="width:120px;height:120px;">
-						</div>
+				<div class="row QR-Code text-center">
+					<div class="col-lg-6 col-sm-6 explain">
+						<h4>请扫描二维码</h4>
+						<h2>登陆</h2>
+					</div>
+					<div class="col-lg-6 col-sm-6">
+						<img src="/img/page1/page1_17.png" alt="二维码扫描" style="width:120px;height:120px;">
 					</div>
 				</div>
 				<!--//二维码-->
 			</div>
-			<div class="col-lg-6 col-sm-6">
+			<div class="col-lg-6 col-sm-6 up-right">
 				<!--订单业务用户数-->
 				<div class="col-lg-6 col-sm-6 orders">
-					<!--<div class="col-lg-12">-->
-						<h2 class="text-center">
-							<span><img src="/img/page1/dindan-icon.png" alt="icon"></span>
+					<h2 class="text-center">
+							<img src="/img/page1/page1_03.png" alt="icon">
 							订单业务用户数
 						<hr/>
-						</h2>
-						<div class="col-lg-12 text-center">
-							<div class="dingdan-bg">
-								<span><img src="/img/page1/dindan-bg.png" alt=""></span>
-								<h1>564601</h1>
-							</div>
-						</div>
-					<!--</div>-->
+					</h2>
+					<div class="col-lg-6 text-center">
+						<img src="/img/page1/page1_10.png" alt="">
+						<h3>装机数</h3>
+						<h1 class="number-text">564601</h1>
+					</div>
+					<div class="col-lg-6 text-center">
+						<img src="/img/page1/page1_12.png" alt="">
+						<h3>拆机数</h3>
+						<h1 class="number-text">12345</h1>
+					</div>
 				</div>
 				<!--//订单业务用户数-->
 				<!--光网端口覆盖率-->
-				<div class="col-lg-6 col-sm-6 light-network">
-					<!--<div class="col-lg-12">-->
-						<h2 class="text-center">
-							<span><img src="/img/page1/guangwang-icon.png" alt="icon"></span>
+				<div class="col-lg-6 col-sm-6 light-network text-center">
+					<h2 class="text-center">
+							<img src="/img/page1/page1_05.png" alt="icon">
 							光网端口覆盖率
 						<hr/>
-						</h2>
-						<div class="col-lg-12" id="js-light-network" style="height:200px;">
-						</div>
-					<!--</div>-->
+					</h2>
+					<div id="js-light-network"></div>
 				</div>
 				<!--//光网端口覆盖率-->
 			</div>
 		</div>
 	</div>
-	<div class="container down">
+	<div class="container-fluid down">
 		<div class="row">
 			<!--左下-->
 			<div class="col-lg-6 col-sm-6">
-				<!--移动业务用户数-->
-				<div class="col-lg-6 col-sm-6 component-6">
-					<!--<div class="col-lg-12">-->
-						<h2><span><img src="/img/page1/yidong-icon.png" alt="icon"></span>
-							移动业务用户数
+				<!--移动用户到达数-->
+				<div class="col-lg-6 col-sm-6 component-6 mobile-user">
+					<h2><img src="/img/page1/page1_21.png" alt="icon">
+							移动用户到达数
 						</h2>
-						<hr/>
-						<div class="col-lg-12 text-center">
-							<span><img src="/img/page1/yidongyewu-man.png" alt=""></span>
-							<h2>6845<small>万</small></h2>
-						</div>
-					<!--</div>-->
+					<hr/>
+					<div class="col-lg-12 text-center">
+						<img src="/img/page1/page1_35.png" alt="">
+						<h2 class="number-text">6845<small>万</small></h2>
+					</div>
 				</div>
-				<!--//移动业务用户数-->
+				<!--//移动用户到达数-->
 				<!--移动开机用户数-->
 				<div class="col-lg-6 col-sm-6 component-6">
-					<!--<div class="col-lg-12">-->
-						<h2><span><img src="/img/page1/yidongkaiji-icon.png" alt="icon"></span>
+					<h2><img src="/img/page1/page1_23.png" alt="icon">
 						移动开机用户数
 						</h2>
-						<hr/>
-						<div class="col-lg-12 text-center">
-							<div id="js-mobile-open-number"></div>
-							<h2>6845<small>万</small></h2>
-						</div>
-					<!--</div>-->
+					<hr/>
+					<div id="js-mobile-open-number"></div>
+					<div class="col-lg-12 text-center">
+						<h2 class="number-text">6845<small>万</small></h2>
+					</div>
 				</div>
 				<!--//移动开机用户数-->
-				<!--移动业务量-->
-				<div class="col-lg-6 col-sm-6 component-6 mobile-business-number">
-					<!--<div class="col-lg-12">-->
-						<h2><span><img src="/img/page1/dindan-icon.png" alt="icon"></span>
-						移动业务量
+				<!--移动语音业务量-->
+				<div class="col-lg-6 col-sm-6 component-6 mobile-voice">
+					<h2><img src="/img/page1/page1_38.png" alt="icon">
+						移动语音业务量
 						</h2>
-						<hr/>
-						<div class="col-lg-12 text-center">
-							<ul class="list-inline">
-								<li><span><img src="/img/page1/phone.png" alt="phone"></span></li>
-								<li>
-									<h2>6845<small>万</small></h2>
-								</li>
-								<li><span><img src="/img/page1/jishiben.png" alt="jishiben"></span></li>
-							</ul>
-						</div>
-					<!--</div>-->
+					<hr/>
+					<div class="col-lg-12 text-center">
+						<ul class="list-inline">
+							<li><img src="/img/page1/page1_48.png" alt="phone"></li>
+							<li>
+								<h2 class="number-text">6845<small>万</small></h2>
+							</li>
+							<li><img src="/img/page1/page1_54.png" alt="jishiben"></li>
+						</ul>
+					</div>
 				</div>
-				<!--//移动业务量-->
-				<!--固网业务量-->
-				<div class="col-lg-6 col-sm-6 component-6 network-business-number">
-					<!--<div class="col-lg-12">-->
-						<h2><span><img src="/img/page1/guwangyewu-icon.png" alt="icon"></span>
-						固网业务量
-						</h2>
-						<hr/>
-						<div class="col-lg-12 text-center">
-							<ul class="list-inline">
-								<li><span><img src="/img/page1/wifi.png" alt="phone"></span></li>
-								<li>
-									<h2>6845<small>万</small></h2>
-								</li>
-								<li><span><img src="/img/page1/jishiben.png" alt="jishiben"></span></li>
-							</ul>
-						</div>
-					<!--</div>-->
+				<!--//移动语音业务量-->
+				<!--移动数据业务量-->
+				<div class="col-lg-6 col-sm-6 component-6 mobile-data">
+					<h2><img src="/img/page1/page1_40.png" alt="icon">
+						移动数据业务量
+					</h2>
+					<hr/>
+					<div class="col-lg-12 text-center">
+						<ul class="list-inline">
+							<li><img src="/img/page1/page1_56.png" alt="phone"></li>
+							<li>
+								<h2 class="number-text">6845<small>万</small></h2>
+							</li>
+							<li><img src="/img/page1/page1_54.png" alt="jishiben"></li>
+						</ul>
+					</div>
 				</div>
-				<!--//固网业务量-->
+				<!--//移动数据业务量-->
 			</div>
 			<!--//左下-->
 			<!--右下-->
 			<div class="col-lg-6 col-sm-6">
-				<!--客服服务平均通话时长-->
+				<!--固网业务量-->
 				<div class="col-lg-6 col-sm-6 component-6">
-					<!--<div class="col-lg-12">-->
-						<h2><span><img src="/img/page1/yidong-icon.png" alt="icon"></span>
-						客服服务平均通话时长
-						</h2>
-						<hr/>
-						<div class="col-lg-3 text-center">
-							<div>
-								<img src="/img/page1/kefufuwu2-icon.png" alt="kefufuwu2-icon"></span>
-							</div>
-							<hr/>
-							<h2 class="text-center">85<small>%</small></h2>
-						</div>
-						<div class="col-lg-12" id="js-service-call">
-						</div>
-					<!--</div>-->
+					<h2><img src="/img/page1/page1_25.png" alt="icon">
+						固网业务量
+					</h2>
+					<hr/>
+					<div id="js-fixed-network-service">
+					</div>
 				</div>
-				<!--//客服服务平均通话时长-->
+				<!--//固网业务量-->
 				<!--客服服务投诉量-->
 				<div class="col-lg-6 col-sm-6 component-6">
-					<!--<div class="col-lg-12">-->
-						<h2><span><img src="/img/page1/yidongyewu-icon.png" alt="icon"></span>
+					<h2><img src="/img/page1/page1_28.png" alt="icon">
 						客服服务投诉量
-						</h2>
-						<hr/>
-						<div class="col-lg-12 " id="js-service-complaint">
-						</div>
-					<!--</div>-->
+					</h2>
+					<hr/>
+					<div id="js-service-complaint">
+					</div>
 				</div>
 				<!--//客服服务投诉量-->
-				<!--客服服务业务量-->
+				<!--客服业务量-->
 				<div class="col-lg-12 component-12 service-business-number">
 					<!--<div class="col-lg-12">-->
-						<h2><span><img src="/img/page1/kefufuwu-icon.png" alt="icon"></span>
-						客服服务业务量
+					<h2><img src="/img/page1/page1_42.png" alt="icon">
+						客服业务量
 						</h2>
-						<hr/>
-						<!--<div class="col-lg-12">-->
-							<div class="col-lg-6 col-sm-6">
-								<div class="col-lg-8">
-									<ul class="list-inline">
-										<li><span><img src="/img/page1/block.png" alt=""></span></li>
-										<li><span><img src="/img/page1/arrow.png" alt=""></span></li>
-										<li><span><img src="/img/page1/phone2.png" alt=""></span></li>
-									</ul>
-								</div>
-								<div class="col-lg-4 text-center">
-									<h3>呼入量</h3>
-									<hr>
-									<h3>678<small>万</small></h3>
-								</div>
-							</div>
-							<div class="col-lg-6 col-sm-6">
-								<div class="col-lg-8">
-									<ul class="list-inline">
-										<li><span><img src="/img/page1/block.png" alt=""></span></li>
-										<li><span><img id="aaa" src="/img/page1/arrow.png" alt=""></span></li>
-										<li><span><img src="/img/page1/phone2.png" alt=""></span></li>
-									</ul>
-								</div>
-								<div class="col-lg-4 text-center">
-									<h3>呼出量</h3>
-									<hr>
-									<h3>678<small>万</small></h3>
-								</div>
-							</div>
-						<!--</div>-->
-					<!--</div>-->
+					<hr/>
+					<!--移动客服业务量-->
+					<div class="col-lg-4">
+						<div class="col-lg-6">
+							<img src="/img/page1/page1_51.png" alt="">
+						</div>
+						<div class="col-lg-6">
+							<h3 class="number-text">3957</h3>
+						</div>
+						<div class="col-lg-12">
+							<h3>移动客服业务量</h3>
+						</div>
+					</div>
+					<!--//移动客服业务量-->
+					<!--固话客服业务量-->
+					<div class="col-lg-4">
+						<div class="col-lg-6">
+							<img src="/img/page1/page1_62.png" alt="">
+						</div>
+						<div class="col-lg-6">
+							<h3 class="number-text">3957</h3>
+						</div>
+						<div class="col-lg-12">
+							<h3>固话客服业务量</h3>
+						</div>
+					</div>
+					<!--//固话客服业务量-->
+					<!--宽带客服业务量-->
+					<div class="col-lg-4">
+						<div class="col-lg-6">
+							<img src="/img/page1/page1_59.png" alt="">
+						</div>
+						<div class="col-lg-6">
+							<h3 class="number-text">3957</h3>
+						</div>
+						<div class="col-lg-12">
+							<h3>宽带客服业务量</h3>
+						</div>
+					</div>
+					<!--//宽带客服业务量-->
 				</div>
-				<!--//客服服务业务量-->
+				<!--//客服业务量-->
 			</div>
 			<!--//右下-->
 		</div>

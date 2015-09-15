@@ -15,4 +15,8 @@ router.get('/page1',function(req,res,next){
   res.render('pages/page1',{title:'page1'});
 })
 
+router.get('/page2',function(req,res,next){
+  res.render('pages/page2',{title:'page2'});
+})
+
 module.exports = router;
