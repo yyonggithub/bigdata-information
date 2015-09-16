@@ -6,6 +6,7 @@
 *{
 	font-family: "Microsoft YaHei";	
 }
+
 .number-text{
 	color: @text-num-color;
 }
@@ -18,7 +19,19 @@ body{
 	& .container-fluid{
 		height:540px;
 		& .component-6{
-			padding-top:35px;
+			& h3{
+				color:#E9D13A;
+				& small{
+					color:#E9D13A;
+				}
+			}
+		}
+		& .row{
+			margin:15px 20px;
+		}
+		// 订单业务数
+		& .order{
+			// padding-top:35px;
 			& .col-lg-10{
 				border-bottom: 2px solid @border-color;
 				& .col-lg-6:last-of-type{
@@ -36,13 +49,115 @@ body{
 		}
 		& .row{
 			& .col-lg-12{
-				height:200px;
+				height:210px;
 				text-align: center;
+				padding-top: 10px;
+				& h2{
+					margin-top: -90px;
+					color: white;
+				}
 			}
 		}
+		
+		// 宽带订单业务数
+		& .network-order{
+			& h3{
+				padding-bottom: 15px;
+				border-bottom: 2px solid @border-color;
+				& img{
+					margin-right: 10px;
+				}
+				& span:nth-of-type(1){
+					display: inline-block;
+					width: 45px;
+					height: 45px;
+					margin:-13px 0;
+					background-image: url("/img/page2/page2_06.png")
+				}
+				& span:nth-of-type(2){
+					margin-bottom: -4px;
+					display: inline-block;
+					height: 24px;
+					width: 10px;
+					margin-right: 10px;
+					border-right: 1px solid #E9D13A;
+					// height: 4px;
+				}
+			}
+		}
+		// 固话订单业务数
+		& .fix-phone-order{
+			& h3{
+				padding-bottom: 15px;
+				border-bottom: 2px solid @border-color;
+				& img{
+					margin-right: 10px;
+				}
+				& span:nth-of-type(1){
+					display: inline-block;
+					width: 45px;
+					height: 45px;
+					margin:-13px 0;
+					background-image: url("/img/page2/page2_06.png")
+				}
+				& span:nth-of-type(2){
+					margin-bottom: -4px;
+					display: inline-block;
+					height: 24px;
+					width: 10px;
+					margin-right: 10px;
+					border-right: 1px solid #E9D13A;
+					// height: 4px;
+				}
+			}
+		}
+		// 移动订单业务数
+		& .mobile-order{
+			& h3{
+				padding-bottom: 15px;
+				border-bottom: 2px solid @border-color;
+				& img{
+					margin-right: 10px;
+				}
+				& span:nth-of-type(1){
+					display: inline-block;
+					width: 45px;
+					height: 45px;
+					margin:-13px 0;
+					background-image: url("/img/page2/page2_06.png")
+				}
+				& span:nth-of-type(2){
+					margin-bottom: -4px;
+					display: inline-block;
+					height: 24px;
+					width: 10px;
+					margin-right: 10px;
+					border-right: 1px solid #E9D13A;
+					// height: 4px;
+				}
+			}
+		}
+		
 	}
 }
 
 #js-all-year-deselect{
-	height: 150px;
+	height: 135px;
+	// text-align:center;
+}
+#js-all-year-select{
+	height: 135px;
+	// text-align: center;
+}
+#js-all-year-deselect-1{
+	height: 200px;
+}
+#js-all-year-select-1{
+	height: 200px;
+}
+#js-network-order-select{
+	height:200px;
+}
+#js-network-order-deselect{
+	height:200px;	
 }

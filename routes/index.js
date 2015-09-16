@@ -19,4 +19,7 @@ router.get('/page2',function(req,res,next){
   res.render('pages/page2',{title:'page2'});
 })
 
+router.get('/demo',function(req,res,next){
+  res.render('demo',{title:"page2"})
+})
 module.exports = router;

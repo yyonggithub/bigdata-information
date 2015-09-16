@@ -71,7 +71,7 @@ module.exports = function (grunt) {
         tasks: ['develop', 'delayed-livereload']
       },
       js: {
-        files: ['public/js/*.js'],
+        files: ['public/js/**/*.js'],
         options: {
           livereload: true
         }

@@ -2,8 +2,8 @@ require.config({
 	paths: {
 		template: 'lib/artTemplate/template-debug',
 		socket: 'lib/socket.io-client/socket.io',
-		echarts: 'lib/echarts',
-		domReady: 'lib/domReady/domReady'
+		domReady: 'lib/domReady/domReady',
+		zrender: 'lib/zrender/zrender',
 	}
 })
 
@@ -11,94 +11,35 @@ require([
 	'require',
 	'domReady!',
 	'template',
-	'echarts',
-	'echarts/chart/bar',
-	'echarts/chart/line',
-	'echarts/chart/pie'
-], function (require, domReady, template, echarts) {
-	var allYearDeselect = echarts.init(document.getElementById("js-all-year-deselect"));
-	var dataStyle = {
-		normal: {
-			label: { show: false },
-			labelLine: { show: false }
-		}
-	};
-	var placeHolderStyle1 = {
-		normal: {
-			// color: ['#ff7f50', '#87cefa', '#da70d6', '#32cd32'],
-			label: { show: false },
-			labelLine: { show: false }
-		},
-		emphasis: {
-			// color: '#000000',
-			label: { show: false },
-			labelLine: { show: false }
-		}
-	};
-	var placeHolderStyle2 = {
-		normal: {
-			// color: '#3599B1',
-			// color: ['#ff7f50', '#87cefa', '#da70d6', '#32cd32'],
-			label: { show: false },
-			labelLine: { show: false }
-		},
-		emphasis: {
-			// color: '#000000',
-			label: { show: false },
-			labelLine: { show: false }
-		}
-	};
-	var aydOption = {
-		title: {
-			text: '68%',
-			x: 'center',
-			y: 'center',
-			itemGap: 20,
-			textStyle: {
-				color: '#1da9a6',
-				fontFamily: 'Microsoft YaHei',
-				fontSize: 35,
-				fontWeight: 'bolder'
-			}
-		},
-		series: [
-			{
-				name: '1',
-				type: 'pie',
-				clockWise: false,
-				radius: [0, 60],
-				itemStyle: dataStyle,
-				data: [
-					{
-						value: 68,
-						name: '68%的人表示过的不错'
-					},
-					{
-						value: 32,
-						name: 'invisible',
-						itemStyle: placeHolderStyle1
-					}
-				]
-			},
-			{
-				name: '2',
-				type: 'pie',
-				clockWise: false,
-				radius: [62, 75],
-				itemStyle: dataStyle,
-				data: [
-					{
-						value: 68,
-						name: '29%的人表示生活压力很大'
-					},
-					{
-						value: 32,
-						name: 'invisible',
-						itemStyle: placeHolderStyle2
-					}
-				]
-			}
-		]
-	};
-	allYearDeselect.setOption(aydOption);
+	'js/page2/allDayInstall',
+	'js/page2/allDayUnInstall',
+	'js/page2/allYearInstallBar',
+	'js/page2/allYearUnInstallBar',
+	'js/page2/networkOrderSelect',
+	// 'js/page2/_networkOrderUnSelect',
+], function (require, domReady, template, _allYearDeselect,_allYearSelect,_allYearInstallBar,_allYearUnInstallBar,_networkOrderSelect) {
+
+	// var allYearDeselect = _allYearDeselect;
+	// allYearDeselect.init('js-all-year-deselect');
+	// allYearDeselect.setOption(88);
+	
+	// var allYearSelect = _allYearSelect;
+	// allYearSelect.init('js-all-year-select');
+	// allYearSelect.setOption(17);
+	
+	var allYearInstallBar = _allYearInstallBar;
+	allYearInstallBar.init('js-all-year-deselect-1');
+	allYearInstallBar.setOption();
+	
+	var allYearUnInstallBar = _allYearUnInstallBar;
+	allYearUnInstallBar.init('js-all-year-select-1');
+	allYearUnInstallBar.setOption();
+	
+	var networkOrderSelect = _networkOrderSelect;
+	networkOrderSelect.init('js-network-order-select','宽带装机数');
+	networkOrderSelect.setOption();
+	
+	var networkOrderUnSelect = _networkOrderSelect;
+	networkOrderUnSelect.init('js-network-order-deselect','宽带拆机数');
+	networkOrderUnSelect.setOption();
 })
